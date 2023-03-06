@@ -1,11 +1,17 @@
 import React from 'react'
+<<<<<<< HEAD
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import BasicRating from './Rating';
+=======
+import { NavLink } from 'react-router-dom'
+
+>>>>>>> d30dfdd9cecf46f5703eef3847c9d7d747fb5a2d
 
 const Movielist = (props) => {
     return (
         <>
+<<<<<<< HEAD
             {props.movies.map(
         function KitchenSinkExample(movie,index) {
             return (
@@ -31,6 +37,17 @@ const Movielist = (props) => {
                 
             );
     })}
+=======
+            {props.movies.map((movie,index)=>
+            <div>
+                <NavLink to={index.toString()}>
+                <h1>{movie.Title}</h1>
+                <p>{movie.Rating}</p>
+                <img src={movie.Poster} alt='movie'></img>
+                
+                </NavLink>
+            </div>)}
+>>>>>>> d30dfdd9cecf46f5703eef3847c9d7d747fb5a2d
         </>
     )}
 

@@ -1,16 +1,22 @@
 import React, { useEffect, useRef, useState } from 'react'
 import './App.css';
 import Movielist from './movielist';
+<<<<<<< HEAD
 import 'bootstrap/dist/css/bootstrap.min.css';
 import StarRatingComponent from 'react-star-rating-component'; 
 import Rating from '@mui/material/Rating';
 
 
+=======
+import Description from './Description';
+import { Route, Routes } from 'react-router-dom';
+>>>>>>> d30dfdd9cecf46f5703eef3847c9d7d747fb5a2d
 function App() {
 
   const [movies,setMovie]=useState([
     {
       Title:'Star Wars',
+<<<<<<< HEAD
       Rating:3,
       Trailer:'https://youtu.be/sGbxmsDFVnE',
       Description:'The Star Wars franchise involves multiple live-action and animated films. The film series started with a trilogy set in medias res that was later expanded to a trilogy of trilogies, known as the "Skywalker Saga".',
@@ -22,6 +28,19 @@ function App() {
       Trailer:'https://youtu.be/d9MyW72ELq0',
       Description:'A paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.',
       Poster:'https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/360E18CC49CEA00B464C19802C5BA34D6F748F853E1EBDF97F1EE2F39CBB39FE/scale?width=1200&aspectRatio=1.78&format=jpeg'
+=======
+      Rating:9,
+      Poster:'https://lumiere-a.akamaihd.net/v1/images/mando-key-art-b-hero-mobile_da6b1047.jpeg?region=0,0,1024,626&width=960',
+      desc:"123456789",
+      Trailer:"https://youtu.be/sGbxmsDFVnE",
+    },
+    {
+      Title:'Avatar',
+      Rating:8,
+      Poster:'https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/360E18CC49CEA00B464C19802C5BA34D6F748F853E1EBDF97F1EE2F39CBB39FE/scale?width=1200&aspectRatio=1.78&format=jpeg',
+      desc:"987654321",
+      Trailer:"https://youtu.be/d9MyW72ELq0",
+>>>>>>> d30dfdd9cecf46f5703eef3847c9d7d747fb5a2d
     }
   ])
 
@@ -70,6 +89,7 @@ function App() {
       <input type={"text"} ref={p1} placeholder="Movie rating" />
       <input type={"text"} ref={p3} placeholder="Trailer src" />
       <button onClick={add}>Add movie</button>
+<<<<<<< HEAD
       
       <input type={'search'} placeholder='search...' ref={p5} onChange={filtrer}></input>
       <StarRatingComponent
@@ -82,6 +102,13 @@ function App() {
       <div className='movie'>
       <Movielist movies={filtredlist} />
       </div>
+=======
+      <Routes>
+      <Route path={"/"} element={<Movielist movies={movies}/>}></Route> 
+      
+        <Route path={"/:id"} element={<Description movies={movies}></Description>}></Route>
+      </Routes>
+>>>>>>> d30dfdd9cecf46f5703eef3847c9d7d747fb5a2d
     </div>
   );
 }
